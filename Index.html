@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Pedido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Simulador de Pedido en un Restaurante</h1>
+
+    <div id="pedido-container">
+        <label for="platillo">Seleccione su platillo:</label>
+        <select id="platillo">
+            <option value="hamburguesa">Hamburguesa 🍔 - $150</option>
+            <option value="pizza">Pizza 🍕 - $200</option>
+            <option value="ensalada">Ensalada 🥗 - $120</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" value="1">
+
+        <div id="extras-container"></div>
+
+        <div id="bebida-container"></div>
+
+        <button onclick="calcularTotal()">Calcular Total</button>
+    </div>
+
+    <div id="resumen-container" class="hidden">
+        <h2>Resumen del Pedido</h2>
+        <p id="resumen"></p>
+        <button onclick="limpiarPedido()">Limpiar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
